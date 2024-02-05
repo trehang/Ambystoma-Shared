@@ -13,5 +13,6 @@
 - Use this command to calculate the nucleotide content of your sequence
     - seqtk comp downloaded_genome.fa | awk 'OFS="\t" {sumA+=$3; sumC+=$4; sumG+=$5; sumT+=$6} END {print "A:"sumA,"C:"sumC,"G:"sumG,"T:"sumT}'
 - This will print out the amounts of each nucleotide A:, C:, G:, T:
-
+To get  the A C G T content, we used the command "seqtk comp PGSH02000029.1"
+The content values were A: 32455, C: 8082 G: 7755 T: 7690
 ## How to predict the amino acid sequence of mRNA 
