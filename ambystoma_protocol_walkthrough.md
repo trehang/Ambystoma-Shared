@@ -20,3 +20,6 @@ To get  the A C G T content, we used the command "seqtk comp PGSH02000029.1"
 - Run: module load emboss/6.6.0 (unless already loaded in workspace)
 - Use the command transeq from the emboss/6.6.0 module to translate the nuceleic acid sequence into amino acids
       - transeq <nucleotide_sequence_filename> <new_protein_filename>
+      our command was as follows "transeq PGSH02000029.1.rev PGSH02000029.1.pep"
+  to ensure the sequence was translated, we used the command "cat PGSH02000029.1.pep"
+  The response displayed was: "Reversed: RSID"
