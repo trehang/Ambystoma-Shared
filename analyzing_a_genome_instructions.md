@@ -35,16 +35,15 @@ Before you can do anything with your genomes data, navigate to your output from 
 Now that you have your desired chromosome as a text file, you can find the reverse complement!
 1. First start off by loading the following commands into your workspace: module load emboss/6.6.0 and seqtk/1.3
 2. Now use, the command revseq chromosome_14.txt chromosome_14.rev to create the reverse complement of the sequence
+   The first line produced:
    --> AATCCCACACAACCAGCTACAccacctgagaactccatggcttacactactccgatgaag
    
 ## Finding the Amino Acid Sequence 
 1. Use the command transeq 'chromosome_14.txt' 'chromosome_14_amino_acid.txt'
 2. Then enter the command head followed by the new file name 'chromosome_14_amino_acid.txt' to load the sequence
+   The first line produced:
   --> GFLCLLFPSPWDKFFLLT*RPFQFLRWPSCLQPLPCRSLGTTSLFPL
 
 ## Finding the Entire Genome's Content
 1. Once again run the commands: module load emboss/6.6.0 and module load seqtk/1.3
-2. Run the command infoseq followed by the file name. In this case, it would be 'chromosome_14.txt'
-   -->   Display basic information about sequences
-USA                      Database  Name           Accession      Type Length %GC    Organism            Description 
-fasta::chromosome_14.txt:CM030330.1 -              CM030330.1     -              N    184706495 46.67                      Ambystoma mexicanum strain DD151 chromosome 14p, whole genome shotgun sequence
+2. Run the command seqtk comp 'GCA_002915635.3_AmbMex60DD_genomic.fna' | awk 'OFS="\t" {sumA+=$3; sumC+=$4; sumG+=$5; sumT+=$6} END {print "A:"sumA,"C:"sumC,"G:"sumG,"T:"sumT}' 
