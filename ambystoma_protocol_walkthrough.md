@@ -15,4 +15,5 @@
 - This will print out the amounts of each nucleotide A:, C:, G:, T:
 To get  the A C G T content, we used the command "seqtk comp PGSH02000029.1"
 The content values were A: 32455, C: 8082 G: 7755 T: 7690
+using the formula "(G+C)/Total_nuc)*100 = 28.3%  (GC Content)
 ## How to predict the amino acid sequence of mRNA 
