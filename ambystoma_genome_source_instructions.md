@@ -20,7 +20,9 @@
 - #SBATCH --output=%j.output
 - #SBATCH --error=%j.error
 
-cd /scratch/macwan.m/GCA_002915635.3
-grep '>' GCA_002915635.3.fa
+- cd /scratch/macwan.m/GCA_002915635.3
+- grep '>' GCA_002915635.3.fa
 
-8. After the job was completed, an output file was produced with a list of chromosomes from the _Ambystoma mexicanum_ genome. 
+8. The job was run with sbatch <bash_file_name>
+9. The job was checked for completion with squeue -u <username>
+10. After the job was completed, an output file was produced with a list of chromosomes from the _Ambystoma mexicanum_ genome. 
