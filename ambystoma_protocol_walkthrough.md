@@ -17,3 +17,6 @@ To get  the A C G T content, we used the command "seqtk comp PGSH02000029.1"
 - The content values were A: 32455, C: 8082 G: 7755 T: 7690
 - We used the formula "(G+C)/Total_nuc)*100 = 28.3%  (GC Content)
 ## How to predict the amino acid sequence of mRNA 
+- Run: module load emboss/6.6.0 (unless already loaded in workspace)
+- Use the command transeq from the emboss/6.6.0 module to translate the nuceleic acid sequence into amino acids
+      - transeq <nucleotide_sequence_filename> <new_protein_filename>
